@@ -17,7 +17,7 @@ keithley2450=rm.open_resource('GPIB0::18::INSTR')
 current=1e-4 #Ampere
 keithley2450.write("*RST")
 keithley2450.write(":SOUR:FUNC:MODE CURR")
-keithley2450.write(":SOUR:CURR:VLIM 10") #compliance voltage V
+keithley2450.write(":SOUR:CURR:VLIM 50") #compliance voltage V
 keithley2450.write(":SOUR:CURR " + str(current))
 keithley2450.write(":OUTP ON")
 
