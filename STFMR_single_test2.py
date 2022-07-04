@@ -61,8 +61,8 @@ def set_field(field):
         ADCMT6240a.write('SOV%f' % field)
 
 def single_STFMR(P,f,datapoint, field_slope , field_offset, start=-6,end=6):
-    AgilentN5183A.write(':POW %d DBM' %P)
-    AgilentN5183A.write(':FREQ %d GHz' %f)
+    AgilentN5183A.write(':POW %f DBM' %P)
+    AgilentN5183A.write(':FREQ %f GHz' %f)
     set_field(start)
     time.sleep(0.5)
     mag = []
